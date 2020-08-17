@@ -29,6 +29,8 @@ articles = ("A", "THE")
 nouns = ("BOY", "GIRL", "BAT", "BALL",)
 verbs = ("HIT", "SAW", "LIKED")
 prepositions = ("WITH", "BY")
+adjectives = ("FIT" "CALM" "ANGRY")
+conjunctions = ("OR" "YET" "SO")
 
 def sentence():
     """Builds and returns a sentence."""
@@ -52,7 +54,7 @@ def main():
     number = int(input("Enter the number of sentences: "))
     for count in range(number):
         print(sentence())
-        
+
 #After iterating loop, display statement and call main
 if __name__ == "__main__":     
     main()
