@@ -37,8 +37,10 @@ conjunctions = ("AND" "SO")
 def sentence():
     """Builds and returns a sentence."""
     x = random.randint(0,1)
-    
-    return nounPhrase() + " " + verbPhrase()
+    if  x == 0:
+        return nounPhrase() + " " + verbPhrase()
+    else:
+        return nounPhrase() + " " + verbPhrase()+clause()
 
 def nounPhrase():
     """Builds and returns a noun phrase."""    
