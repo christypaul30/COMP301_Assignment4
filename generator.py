@@ -29,20 +29,28 @@ articles = ("A", "THE")
 nouns = ("BOY", "GIRL", "BAT", "BALL",)
 verbs = ("HIT", "SAW", "LIKED")
 prepositions = ("WITH", "BY")
-adjectives = ("FIT" "CALM" "ANGRY")
-conjunctions = ("OR" "YET" "SO")
+
+#Task 2: Modifications to generator
+adjectives = ("RED" "SORE")
+conjunctions = ("AND" "SO")
 
 def sentence():
     """Builds and returns a sentence."""
+    x = random.randint(0,1)
+    
     return nounPhrase() + " " + verbPhrase()
 
 def nounPhrase():
-    """Builds and returns a noun phrase."""
+    """Builds and returns a noun phrase."""    
     return random.choice(articles) + " " + random.choice(nouns)
-
+    
 def verbPhrase():
     """Builds and returns a verb phrase."""
-    return random.choice(verbs) + " " + nounPhrase() + " " + prepositionalPhrase()
+    x = random.randint(0,1)
+    if x == 0:
+        return random.choice(verbs) + " " + nounPhrase() + " "
+    else:
+        return random.choice(verbs) + " " + nounPhrase() + " " + prepositionalPhrase()
 
 def prepositionalPhrase():
     """Builds and returns a prepositional phrase."""
