@@ -13,16 +13,17 @@ def getWords(filename):
     for line in readFile:
         line = line.strip()
         temporary_List.append(line)
-        #List converted to Tuple
-        words = tuple(temporaryList)
-        readFile.close()
-        return words
+    
+    #List converted to Tuple
+    allwords = tuple(temporary_List)
+    readFile.close()
+    return allwords
 
-        #Get text files from getWords method
-        articles = getWords('articles.txt')
-        nouns = getWords('nouns.txt')
-        verbs = getWords('verbs.txt')
-        prepositions = getWords('prepositions.txt')
+#Get text files from getWords method
+articles = getWords('articles.txt')
+nouns = getWords('nouns.txt')
+verbs = getWords('verbs.txt')
+prepositions = getWords('prepositions.txt')
 
 articles = ("A", "THE")
 nouns = ("BOY", "GIRL", "BAT", "BALL",)
@@ -51,6 +52,7 @@ def main():
     number = int(input("Enter the number of sentences: "))
     for count in range(number):
         print(sentence())
-
+        
+#After iterating loop, display statement and call main
 if __name__ == "__main__":     
     main()
