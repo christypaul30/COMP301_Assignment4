@@ -6,9 +6,24 @@ and vocabulary. Words are chosen at random.
 
 import random
 
+#Implement getWords method
 def getWords(filename):
     readFile = open(filename, "r")
-    temporaryList= 
+    temporary_List = list()
+    for line in readFile:
+        line = line.strip()
+        temporary_List.append(line)
+        #List converted to Tuple
+        words = tuple(temporaryList)
+        readFile.close()
+        return words
+
+        #Get text files from getWords method
+        articles = getWords('articles.txt')
+        nouns = getWords('nouns.txt')
+        verbs = getWords('verbs.txt')
+        prepositions = getWords('prepositions.txt')
+
 articles = ("A", "THE")
 nouns = ("BOY", "GIRL", "BAT", "BALL",)
 verbs = ("HIT", "SAW", "LIKED")
@@ -36,5 +51,6 @@ def main():
     number = int(input("Enter the number of sentences: "))
     for count in range(number):
         print(sentence())
-        
-main()
+
+if __name__ == "__main__":     
+    main()
