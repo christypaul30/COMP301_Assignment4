@@ -5,6 +5,10 @@ and vocabulary. Words are chosen at random.
 """
 
 import random
+
+def getWords(filename):
+    readFile = open(filename, "r")
+    temporaryList= 
 articles = ("A", "THE")
 nouns = ("BOY", "GIRL", "BAT", "BALL",)
 verbs = ("HIT", "SAW", "LIKED")
